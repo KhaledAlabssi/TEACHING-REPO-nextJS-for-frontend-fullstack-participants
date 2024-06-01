@@ -6,7 +6,7 @@ function page() {
     <div>
         <p>Books pages</p>
         <p>Route: 'baseURL'/books</p>
-        <Link href="/" className='btn bg-red-500 m-2'>Home Page</Link>
+        <Link href="/" className='btn m-2'>Home Page</Link>
     </div>
   )
 }
