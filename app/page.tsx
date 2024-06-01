@@ -8,6 +8,7 @@ export default function Home() {
       
       <Link href="/books" className='btn bg-red-500 m-2'>Home Page</Link>
       <Link href="/pets" className='btn bg-red-500 m-2'>Home Page</Link>
+      <Link href="/data" className='btn bg-red-500 m-2'>Data Page</Link>
       
     </main>
   );
