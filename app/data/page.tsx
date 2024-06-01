@@ -1,29 +1,34 @@
 import React from 'react'
 import axios from 'axios'
-import { log } from 'console'
+import { error, log } from 'console'
 
 const url = "https://jsonplaceholder.typicode.com/albums/1"
-const apiData = () :{}=> {
-    let data = axios(url)
-        .then(i => i.data)
-        .then(e => log(e))
+// const apiData = () => {
+//     let data = axios(badURL)
+//         .then(i => {
+//             log(i.data)
+//         })
+//         .catch(e => 
+//             {throw new Error("failed")}
+//         )
+// }
+const badURL = "https://jsonplaceholder.typicode.com/albumsssssss/1"
+const apiData = async () => {
+    const respose = await fetch(badURL)
 
+    if(!respose.ok){
+        throw new Error("apiData error!!!")
+    }
+
+    const data = await respose.json()
     return data
-
 }
 
-function page() {
+async function page () {
     // axios("https://jsonplaceholder.typicode.com/albums/1")
     //     .then(i => log(i.data))
     //     .catch(e => e) 
-    const fetchData = async () => {
-        setTimeout(() => {
-            
-            log(apiData())
-        }, 1500);
-    }
-
-    fetchData()
+    await apiData()
     
   return (
     <div>
