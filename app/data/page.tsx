@@ -28,7 +28,7 @@ async function page () {
     // axios("https://jsonplaceholder.typicode.com/albums/1")
     //     .then(i => log(i.data))
     //     .catch(e => e) 
-    await apiData()
+    // await apiData()
     
   return (
     <div>
