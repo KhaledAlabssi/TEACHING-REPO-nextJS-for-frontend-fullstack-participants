@@ -1,10 +1,13 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="">
 
       <p>Welcome to Home Page...</p>
+      
+      <Link href="/books" className='btn bg-red-500 m-2'>Home Page</Link>
+      <Link href="/pets" className='btn bg-red-500 m-2'>Home Page</Link>
       
     </main>
   );
