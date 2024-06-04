@@ -7,11 +7,21 @@ const dbHandler = async () => {
             content: "walk the dog"
         }
     })
-    const todos = await prisma.todo.findMany()
+    // const todos = await prisma.todo.findMany()
+    const todos = await prisma.todo.findMany({
+        orderBy: {
+            completed: 'asc'
+        }
+    })
+
+    return todos
 }
-function dbExamplePage() {
+async function dbExamplePage() {
+    const todosData = await dbHandler()
   return (
-    <div>dbExamplePage</div>
+    <div>
+        {todosData.map(i => <p key={i.id}>{i.content}</p>)}
+    </div>
   )
 }
 
