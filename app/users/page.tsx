@@ -1,7 +1,5 @@
-
-
-
-import UsersList from '@/component/usersList'
+UsersList
+import UsersList from '@/component/UsersList'
 import React from 'react'
 
 function page() {

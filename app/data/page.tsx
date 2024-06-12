@@ -29,9 +29,12 @@ async function page () {
     //     .then(i => log(i.data))
     //     .catch(e => e) 
     // await apiData()
+
+    
     
   return (
     <div>
+      
         <p>Data Page...</p>
     </div>
   )
