@@ -5,7 +5,7 @@ import TodoDeleteForm from '../../component/todoMod/TodoDeleteForm'
 import prisma from '@/utils/db'
 
 const getData = async () => {
-    const d = await prisma.todo.findMany()
+    const d = await prisma.todo.findMany({})
 }
 
 const createData = async (d) => {
