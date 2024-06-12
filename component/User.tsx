@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 function User({user}:any) {
-  const [first, setFirst] = useState(false)
   function clickHandler (e: any) {
-    setFirst(!first)
-    console.log(e.target.classList.toggle("hi"))
+
+    const ele = e.target
+
+    
     
   }
   return (
