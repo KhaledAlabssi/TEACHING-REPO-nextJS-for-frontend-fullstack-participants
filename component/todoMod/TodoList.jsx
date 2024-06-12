@@ -1,13 +1,14 @@
-import React from 'react'
-import prisma from '@/utils/db'
 
-async function TodoList() {
-  
-    const todos = await prisma.todo.findMany()
+import React from 'react'
+import TodoItem from './TodoItem';
+
+async function TodoList({todos}) {
+  console.log(todos);
+    
 
   return (
     <div className=''>
-        {todos.map(i => <div className='w-full h-36 text-primary'>{i.content}</div>)}
+        {/* {todos.map(i => <TodoItem todo={i} />)} */}
     </div>
   )
 }
